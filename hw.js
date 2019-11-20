@@ -127,7 +127,14 @@ const wordsWithAtLeastFiveLetters = function (words) {
 const allStartingWithA = function (words) {
 
   // Your Code Here
-}
+  for (let i = 0; i < words.length; i++){
+    if((words[i].slice(0,1) === 'a' ) || (words[i].slice(0,1) === 'A')){
+      //console.log("The Words of the array is as following:" + words[i])
+     return true; {
+   else if(words.length = 0)
+      return true;
+    }
+  
 
 // #6
 // Input: an array of words
