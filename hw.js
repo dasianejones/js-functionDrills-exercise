@@ -20,6 +20,20 @@
 const sumOfNums = function (numsArray) {
 
   // Your Code Here
+
+  // If array is empty, return 0
+  
+  // Create a variable to track the sum
+let sum = 0;
+
+  // Loop through the array of numbers
+for(let i =0; i < numsArray.length; i++) {
+
+  // For each number, add the number to the sum
+  sum += numsArray[i]
+  
+  }
+return sum;
 }
 
 
@@ -31,10 +45,25 @@ const sumOfNums = function (numsArray) {
 // Test Case:
 //   Expect numsGreaterThanTen([-1, 0, 1, 9, 9.5, 9.99, 10, 11, 20, 100]) to equal [11, 20, 100]
 
-const numsGreaterThanTen = function (numsArray) {
+  let numsArray = [-1, 0, 1, 9, 9.5, 9.99, 10, 11, 20, 100];
 
-  // Your Code Here
+  const numsGreaterThanTen = function (numsArray) {
+
+  let moreThanTen = [];
+
+  for (let i = 0; i < numsArray.length; i++) {
+    if (numsArray[i] > 10) 
+    {
+      moreThanTen.push(numsArray[i])
+    }
+
+    return moreThanTen;
+  }
 }
+
+numsGreaterThanTen(numsArray)
+
+
 
 // #3
 // Input: an array of numbers
