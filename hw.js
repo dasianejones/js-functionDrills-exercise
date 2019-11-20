@@ -258,7 +258,7 @@ const wordsWithAtLeastTwoVowels = function (words) {
  }
 
     }
-return array2Vowels;
+
   // Your Code Here
 } 
 
@@ -273,6 +273,25 @@ return array2Vowels;
 
 const allHaveAtLeastTwoVowels = function (words) {
 
+
+  for (let = 0; i < words.length; i++) {
+
+    if (words.length === 0) {
+      return true;
+  
+    }
+    {let allVowelsArray = wordsWithAtLeastTwoVowels(words)}
+  }
+  {
+    
+  }
+  
+
+  
+
+  
+
+  
   // Your Code Here
 }
 
