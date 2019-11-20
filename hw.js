@@ -80,7 +80,7 @@ numsGreaterThanTen(numsArray)
 const allGreaterThanTen = function (numsArray) {
 
   // Your Code Here
-  
+
   let moreThanTen =[];
 
   for (var i=0; i<numsArray.length; i++){
@@ -105,6 +105,13 @@ const allGreaterThanTen = function (numsArray) {
 const wordsWithAtLeastFiveLetters = function (words) {
 
   // Your Code Here
+
+  let wordsArray = [];
+  for(let i=0; i< words.length; i++){
+    if(words[i].length >=5){
+    wordsArray.push(words[i])
+    }
+  }
 }
 
 // #5
