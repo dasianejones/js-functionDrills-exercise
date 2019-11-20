@@ -80,6 +80,19 @@ numsGreaterThanTen(numsArray)
 const allGreaterThanTen = function (numsArray) {
 
   // Your Code Here
+  
+  let moreThanTen =[];
+
+  for (var i=0; i<numsArray.length; i++){
+    if (numsAlerray[i]>10)
+    {
+      return true;
+    }
+    else
+    return false;
+  }
+ 
+}
 }
 
 // #4
