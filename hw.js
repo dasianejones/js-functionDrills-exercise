@@ -146,6 +146,13 @@ const allStartingWithA = function (words) {
 const anyStartingWithB = function (words) {
 
   // Your Code Here
+
+  for (let i = 0; i < words.length; i++) {
+        if (words[ i ].slice(0, 1) === 'b' || words[ i ].slice(0, 1) === 'B') {
+          return true
+        }
+      }
+      return false
 }
 
 // This last set of functions are all related to one another! Use functions 7 to solve function 8,
