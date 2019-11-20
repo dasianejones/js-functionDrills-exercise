@@ -47,7 +47,7 @@ return sum;
 
   let numsArray = [-1, 0, 1, 9, 9.5, 9.99, 10, 11, 20, 100];
 
-  const numsGreaterThanTen = function (numsArray) {
+  const numsGreaterThanTen = function(numsArray) {
 
   let moreThanTen = [];
 
@@ -56,9 +56,9 @@ return sum;
     {
       moreThanTen.push(numsArray[i])
     }
-
-    return moreThanTen;
   }
+  return moreThanTen;
+
 }
 
 numsGreaterThanTen(numsArray)
@@ -81,17 +81,13 @@ const allGreaterThanTen = function (numsArray) {
 
   // Your Code Here
 
-  let moreThanTen =[];
 
-  for (var i=0; i<numsArray.length; i++){
-    if (numsAlerray[i]>10)
-    {
-      return true;
+  for (let i = 0; i < numsArray.length; i++){
+    if (numsArray[i] <= 10) {
+      return false;
     }
-
-    return false;
   }
- 
+  return true;
 }
 
 
