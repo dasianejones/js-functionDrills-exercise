@@ -17,7 +17,7 @@
 //   Expect sumOfNums([-1,0,1])) to equal 0
 //   Expect sumOfNums([])) to equal 0
 
-const sumOfNums = function (numsArray) {
+const sumOfNums = function(numsArray) {
 
   // Your Code Here
 
@@ -27,14 +27,14 @@ const sumOfNums = function (numsArray) {
 let sum = 0;
 
   // Loop through the array of numbers
-for(let i =0; i < numsArray.length; i++) {
+for (let i = 0; i < numsArray.length; i++) {
 
   // For each number, add the number to the sum
-  sum += numsArray[i]
+  sum += numsArray[i];
   
   }
 return sum;
-}
+};
 
 
 
@@ -88,12 +88,12 @@ const allGreaterThanTen = function (numsArray) {
     {
       return true;
     }
-    else
+
     return false;
   }
  
 }
-}
+
 
 // #4
 // Input: an array of words
@@ -127,13 +127,38 @@ const wordsWithAtLeastFiveLetters = function (words) {
 const allStartingWithA = function (words) {
 
   // Your Code Here
-  for (let i = 0; i < words.length; i++){
-    if((words[i].slice(0,1) === 'a' ) || (words[i].slice(0,1) === 'A')){
-      //console.log("The Words of the array is as following:" + words[i])
-     return true; {
-   else if(words.length = 0)
-      return true;
+  // Convert words to all uppercase
+  //  If array is empty
+  if (words.length === 0) {
+    return true;
+
+  }
+    // return true
+    
+
+  // Else
+  // Loop through each element in the array
+  for (let i = 0; i < words.length; i++) {
+  // Test is first character is equal to 'A'
+    if (words[i][0].toUpperCase() !== 'A' ) {
+      return false;
     }
+  }
+  
+   // words[i][0] = We are telling the system to look inside words, which is the array, and find the first index, which i = 0, of that array, 
+  //  and then inside of that first index, we want the system to find the first letter, which is [0], 
+  //  of the first word found in the index.
+
+  return true;
+}
+
+  // for (let i = 0; i < words.length; i++){
+  //   if((words[i].slice(0,1) === 'a' ) || (words[i].slice(0,1) === 'A')){
+  //     //console.log("The Words of the array is as following:" + words[i])
+  //    return true; {
+  //  else if(words.length = 0)
+  //     return true;
+  //   }
   
 
 // #6
@@ -148,11 +173,12 @@ const anyStartingWithB = function (words) {
   // Your Code Here
 
   for (let i = 0; i < words.length; i++) {
-        if (words[ i ].slice(0, 1) === 'b' || words[ i ].slice(0, 1) === 'B') {
-          return true
-        }
-      }
-      return false
+    if (words[i][0].toUpperCase() === 'B') {
+      return true
+    }
+  }
+
+return false
 }
 
 // This last set of functions are all related to one another! Use functions 7 to solve function 8,
@@ -173,22 +199,40 @@ const hasAtLeastNVowels = function (word, n) {
 
   // Your Code Here
 
-  if (n < 0) {
-        return null
-      }
-      let count = 0
-      for (let i = 0; i < word.length; i++) {
-        if (word.charAt(i) === 'a' || word.charAt(i) === 'A' ||
-          word.charAt(i) === 'e' || word.charAt(i) === 'E' ||
-          word.charAt(i) === 'i' || word.charAt(i) === 'I' ||
-          word.charAt(i) === 'o' || word.charAt(i) === 'O' ||
-          word.charAt(i) === 'u' || word.charAt(i) === 'U'
-        ) {
-          count++
-        }
-      }
-      return count >= n
-}
+
+
+ if (n <0) {
+    return null;
+  }
+  
+  let numOfVowels = 0;
+
+ let wordAsUpperCase = word.toUpperCase();
+
+ for (let i=0; i < word.length; i++) {
+   if ('AEIOU'.indexOf(wordAsUpperCase[i]) > -1) {
+     numOfVowels += 1
+   }
+ }
+
+ return numOfVowels >= n;
+
+};
+
+
+//  if (
+//     wordAsUpperCase[i] === 'A' || 
+//     wordAsUpperCase[i] === 'E' || 
+//     wordAsUpperCase[i] === 'I' || 
+//     wordAsUpperCase[i] === 'O' || 
+//     wordAsUpperCase[i] === 'U' 
+//     ) {
+//     numofVowels += 1
+//  }
+//  }
+//  return numofVowels >= n
+// };
+
 
 // #8
 // Input: an array of words
