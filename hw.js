@@ -102,13 +102,20 @@ const wordsWithAtLeastFiveLetters = function (words) {
 
   // Your Code Here
 
-  let wordsArray = [];
-  for(let i=0; i< words.length; i++){
-    if(words[i].length >=5){
-    wordsArray.push(words[i])
+  let wordsArray= [];
+
+
+  for (let i = 0; i < words.length; i++){
+
+    if (words[i].length >=5) {
+
+     wordsArray.push(words[i])
     }
   }
+return wordsArray;
 }
+
+
 
 // #5
 // Input: an array of words
@@ -240,8 +247,20 @@ const hasAtLeastNVowels = function (word, n) {
 
 const wordsWithAtLeastTwoVowels = function (words) {
 
+  let array2Vowels = [];
+
+  for (let i = 0; i < words.length; i++) {
+
+ let arrayNew = hasAtLeastNVowels(words[i], 2)
+ 
+ if (arrayNew === true) {
+   array2Vowels.push(words[i])
+ }
+
+    }
+return array2Vowels;
   // Your Code Here
-}
+} 
 
 // #9
 // Input: an array of words
@@ -256,6 +275,7 @@ const allHaveAtLeastTwoVowels = function (words) {
 
   // Your Code Here
 }
+
 
 // #10
 // Input: an array of words
